@@ -10,7 +10,7 @@ import './App.css';
 
 export default function App() {
   const { data_, columns, loading, error } = useData(
-    'https://jsonplaceholder.typicode.com/users' // url апиши который вам нужен 
+    'https://jsonplaceholder.typicode.com/users' // url апишки который вам нужен 
   );
 
   const [search, setSearch] = useState('');
@@ -24,7 +24,7 @@ export default function App() {
   const filteredData = useMemo(
     () =>
       data_.filter((u) =>
-        // ищем по всем строковым полям, не только по имени
+        // ищем по всем строковым полям
         Object.values(u).some((val) =>
           String(val).toLowerCase().includes(search.toLowerCase())
         )
