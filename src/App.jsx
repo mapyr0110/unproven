@@ -61,8 +61,7 @@ export default function App() {
             <p className="results-count">
               Найдено: {filteredData.length} из {data_.length}
             </p>
-
-            {/* передаём selectedColumns чтобы таблица тоже была динамической */}
+            
             <DataTable data_={filteredData} columns={selectedColumns} />
           </>
         )}
